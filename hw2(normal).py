@@ -45,5 +45,12 @@ class Enemy(Person):
 
 my_player = Player("Yagami", "Elf", 110, 10, 3)
 my_enemy  = Enemy("L", "Dwarf", 100, 6, 8)
-my_player.attack(my_enemy)
-my_enemy.attack(my_player)
+
+while my_player.health > 0 and my_enemy.health > 0:
+    my_player.attack(my_enemy)
+    if my_enemy.health <= 0:
+        print(f"{my_enemy.name} повержен!")
+        break
+    my_enemy.attack(my_player)
+    if my_player.health <= 0:
+        print(f"{my_player.name} повержен!")
