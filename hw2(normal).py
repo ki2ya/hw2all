@@ -49,8 +49,8 @@ my_enemy  = Enemy("L", "Dwarf", 100, 6, 8)
 while my_player.health > 0 and my_enemy.health > 0:
     my_player.attack(my_enemy)
     if my_enemy.health <= 0:
-        print(f"{my_enemy.name} повержен!")
+        print(f"{my_enemy.name} умер")
         break
     my_enemy.attack(my_player)
     if my_player.health <= 0:
-        print(f"{my_player.name} повержен!")
+        print(f"{my_player.name} умер")
